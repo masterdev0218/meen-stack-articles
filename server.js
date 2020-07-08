@@ -6,11 +6,7 @@ const articleRouter = require('./routes/article.routes');
 const methodOverride = require('method-override');
 const app = express();
 
-// mongoose.connect('mongodb://localhost/articles', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-//   useCreateIndex: true
-// });
+const article_controller = require('./controllers/article.controllers');
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -33,10 +29,12 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
-app.get('/', async (req, res) => {
-	const articles = await Article.find().sort({ createdAt: 'desc' });
-	res.render('articles/index', { articles: articles });
-});
+// app.get('/', async (req, res) => {
+// 	const articles = await Article.find().sort({ createdAt: 'desc' });
+// 	res.render('articles/index', { articles: articles });
+// });
+
+app.get('/', article_controller.article_list);
 
 app.use('/articles', articleRouter);
 

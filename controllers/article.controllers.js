@@ -1,5 +1,15 @@
 const Article = require('../models/article');
 
+// Display articles list in date order
+exports.article_list = async (req, res) => {
+	try {
+		const articles = await Article.find().sort({ createdAt: 'desc' });
+		res.render('articles/index', { articles: articles });
+	} catch (error) {
+		res.status(500).json({ message: err.message });
+	}
+}
+
 // Display new article
 exports.new_article = async (req, res) => {
 	try {
