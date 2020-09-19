@@ -20,10 +20,8 @@
 
 ## :books: General info
 
-* Login authentication using google auth API
-* After authentication dashboard displays list of publications for the person logged in
-* Side menu has navigation to all public publications and a logout link
-* Public publications page displays everyones publications stored in the MongoDB that have 'public' status
+* Uses the EJS (Express JS) template engine to be able to use static template files with dynamic content. It is faster and simpler than Angular or React but has less features
+* Partials used to be able to reuse the same code - eg header.ejs which includes the Bootstrap CDN link.
 
 ## :camera: Screenshots
 
@@ -43,7 +41,7 @@
 
 ## :floppy_disk: Setup
 
-* `npm run dev` to run Ejs client and backend server concurrently. Navigate to `http://localhost:5000/` to see frontend (refresh after changes - does not auto-update).
+* `npm run dev` to run Ejs client and backend server concurrently. Navigate to `http://localhost:4000/` to see frontend (refresh after changes - does not auto-update).
 
 ## :computer: Code Examples
 
@@ -57,7 +55,7 @@
 ## :cool: Features
 
 * In dev - Front and backends are run with one command
-* TO DO: backend code separates Express controller functions from routes
+* backend code separates Express controller functions from routes
 * TO DO: Updating a note will automatically update the date so it goes to the front of the (date-sorted) notes list
 
 ## :clipboard: Status & To-Do List

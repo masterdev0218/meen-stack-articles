@@ -34,7 +34,7 @@ exports.find_to_show = async (req, res) => {
 	try {
 		const article = await Article.findOne({ slug: req.params.slug });
 		if (article == null) res.redirect('/');
-		res.render('articles/show', { article: article });
+		res.render('articles/display_all', { article: article });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -53,8 +53,8 @@ exports.presave_new_article = async (req, res, next) => {
 // Presave edited article
 exports.presave_edited_article = async (req, res, next) => {
 	try {
-			req.article = await Article.findById(req.params.id);
-			next();
+		req.article = await Article.findById(req.params.id);
+		next();
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}

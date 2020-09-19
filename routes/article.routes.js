@@ -26,7 +26,7 @@ function saveArticleAndRedirect(path) {
 		article.description = req.body.description;
 		article.markdown = req.body.markdown;
 		try {
-			article = await article.save();	
+			article = await article.save();
 			res.redirect(`/articles/${article.slug}`);
 		} catch (e) {
 			res.render(`articles/${path}`, { article: article });
