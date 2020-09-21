@@ -1,7 +1,7 @@
 {
   "name": "meen-stack-articles",
   "version": "1.0.0",
-  "description": "",
+  "description": "full stack app to display written articles",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server.js"
@@ -10,16 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dompurify": "^2.0.16",
+    "dompurify": "^2.0.17",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
     "jsdom": "^16.4.0",
     "marked": "^1.1.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.10.5",
-    "nodemon": "^2.0.4",
-    "save-dev": "0.0.1-security",
+    "mongoose": "^5.10.6",
     "slugify": "^1.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

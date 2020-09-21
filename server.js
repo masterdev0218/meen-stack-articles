@@ -1,11 +1,11 @@
 const express = require('express');
-const app = express();
-
 const mongoose = require('mongoose');
 const Article = require('./models/article');
-const { PORT, mongoUri } = require('./config/config');
-const articleRouter = require('./routes/article.routes');
+const articleRouter = require('./routes/articles');
 const methodOverride = require('method-override');
+
+const app = express();
+const { PORT, mongoUri } = require('./config/config');
 
 const path = require('path');
 
@@ -32,21 +32,12 @@ app.set('view engine', 'ejs');
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 
-// app.get('/', article_controller.article_list);
-
-app.get('/', async (req, res) => {
-  const articles = await Article.find().sort({
-    createdAt: 'desc'
-  })
-  res.render('articles/index', {
-    articles: articles
-  })
-});
+app.get('/', article_controller.article_list);
 
 app.use('/articles', articleRouter);
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(PORT, function () {
+app.listen(PORT, () => {
 	console.log('Server is running on Port:', PORT);
 });

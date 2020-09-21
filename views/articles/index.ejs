@@ -1,11 +1,8 @@
-<!-- <%- include ("partials/header", {title: "Index"}) %> -->
 <%- include('partials/header', {title: "Index"}); %>
 
-<!-- Display title hub with button to add article -->
 <div class="container">
-	<!---->
 	<div class="d-flex justify-content-center pt-3">
-		<div class="alert alert-success border-dark p-2 m-0" role="alert">
+		<div class="alert alert-success border-dark p-2 mb-1" role="alert">
 			<div class="d-flex justify-content-between">
 				<h4 class="alert-heading text-center m-0">Technical Articles</h4>
 				<a href="/articles/new" class="btn btn-light btn-sm ml-2"
@@ -15,31 +12,34 @@
 		</div>
 	</div>
 
-	<!-- Display list of cards, each with edit & delete buttons-->
 	<% articles.forEach(article => { %>
-	<!-- <div class="card mt-4"> -->
 	<div class="card card-shadow width-225px m-2">
-		<div class="card-body">
-			<h4 class="card-title"><%= article.title %></h4>
+		<div class="card-body p-2">
+			<h5 class="card-title"><%= article.title %></h5>
 		</div>
 		<div class="card-footer p-2">
 			<small class="text-muted d-flex justify-content-between">
 				<div class="d-flex align-items-center">
-					<img src="/images/event_note-24px.svg" class="mr-1" />
-					<!-- <%= article.createdAt.toLocaleString("en-GB", { year: 'numeric',
-						month: 'long', day: 'numeric' }) %> -->
+					<img src="/images/event_note-24px.svg" alt="date article was created" class="mr-1" />
+					<%= article.createdAt.toLocaleDateString() %>
 				</div>
-				<%- include('partials/date'); %>
-				<a href="articles/<%= article.slug %>" class="btn btn-primary"
-					>More...</a
+
+				<a href="articles/<%= article.slug %>" class="btn btn-outline-info btn-sm"
+					><img src="/images/list-24px.svg" /></a
 				>
-				<a href="articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+				<a href="articles/edit/<%= article.id %>" class="btn btn-outline-info btn-sm"
+					><img src="/images/pencil-24px.svg" alt="button to edit article"
+				/></a>
 				<form
 					action="/articles/<%= article.id %>?_method=DELETE"
 					method="POST"
-					class="d-inline"
 				>
-					<button type="submit" class="btn btn-danger">Delete</button>
+					<button type="submit" class="btn btn-outline-danger btn-sm">
+						<img
+							src="/images/trash-24px.svg"
+							alt="button to delete article"
+						/>
+					</button>
 				</form>
 			</small>
 		</div>

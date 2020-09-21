@@ -5,10 +5,10 @@ exports.article_list = async (req, res) => {
 	try {
 		const articles = await Article.find().sort({ createdAt: 'desc' });
 		res.render('articles/index', { articles: articles });
-	} catch (error) {
+	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
-}
+};
 
 // Display new article
 exports.new_article = async (req, res) => {

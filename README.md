@@ -31,7 +31,6 @@
 
 * [EJS v3](https://ejs.co/#promo) Embedded Javascript templating to generate HTML markup
 * [Express method-override](http://expressjs.com/en/resources/middleware/method-override.html) to be able to use HTTP verbs PUT or DELETE
-
 * [Express v4](https://expressjs.com/) framework for Node.js
 * [Mongoose v5](https://mongoosejs.com/)
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
@@ -56,12 +55,12 @@
 
 * In dev - Front and backends are run with one command
 * backend code separates Express controller functions from routes
-* TO DO: Updating a note will automatically update the date so it goes to the front of the (date-sorted) notes list
+* TO DO: Updating an article will automatically update the date so it goes to the front of the (date-sorted) notes list
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working. Refactor - add functionality.
-* To-Do: refactor routes, add MongoDB url and .env. Add modals/toasts to say if title is repeated etc.
+* To-Do: Add modals/toasts to say if title is repeated etc.
 
 ## :clap: Inspiration
 
