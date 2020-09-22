@@ -4,7 +4,9 @@ const Article = require('../models/article');
 exports.article_list = async (req, res) => {
 	try {
 		const articles = await Article.find().sort({ createdAt: 'desc' });
-		res.render('articles/index', { articles: articles });
+		const totalArticles = articles.length;
+		const articlesString = articles.length === 1 ? ' article' : ' articles';
+		res.render('articles/index', { articles, totalArticles, articlesString });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}

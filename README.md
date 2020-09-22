@@ -60,7 +60,7 @@
 ## :clipboard: Status & To-Do List
 
 * Status: Working. Refactor - add functionality.
-* To-Do: Add modals/toasts to say if title is repeated etc.
+* To-Do: Add modals/toasts to say if title is repeated etc. Add markdown editor?
 
 ## :clap: Inspiration
 
