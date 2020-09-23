@@ -1,22 +1,13 @@
 <%- include('partials/header', {title: "Index"}); %>
-
+<%- include('partials/navbar') %>
 <div class="container">
 	<div class="d-flex justify-content-center pt-3">
 		<div class="alert alert-success border-dark p-2 mb-1" role="alert">
-			<div class="d-flex justify-content-between">
-				<h5 class="alert-heading text-center mt-1">Articles</h5>
-				<a href="/articles/new" class="btn btn-light btn-sm ml-2"
-					><img src="/images/add-24px.svg"
-				/></a>
-			</div>
-			<hr class="mx-0 my-2 border-dark" />
 			<p class="mb-0 text-center">
 				You have
-				<span
-					class="badge badge-pill badge-light"
-					style="font-size: 18px;"
-				><%= totalArticles%></span><%= articlesString %>
-
+				<span class="badge badge-pill badge-light" style="font-size: 18px"
+					><%= totalArticles%></span
+				><%= articlesString %>
 			</p>
 		</div>
 	</div>
@@ -29,29 +20,30 @@
 		<div class="card-footer p-2">
 			<small class="text-muted d-flex justify-content-between">
 				<div class="d-flex align-items-center">
-					<img src="/images/event_note-24px.svg" alt="date article was created" class="mr-1" />
+					<img
+						src="/images/event_note-24px.svg"
+						alt="date article was created"
+						class="mr-1"
+					/>
 					<%= article.createdAt.toLocaleDateString() %>
 				</div>
 
-				<a href="articles/<%= article.slug %>" class="btn btn-outline-dark btn-sm"
-					><img src="/images/view-24px.svg" /></a
-				>
-				<a href="articles/edit/<%= article.id %>" class="btn btn-outline-info btn-sm"
+				<a
+					href="articles/<%= article.slug %>"
+					class="btn btn-outline-dark btn-sm"
+					><img src="/images/view-24px.svg"
+				/></a>
+				<a
+					href="articles/edit/<%= article.id %>"
+					class="btn btn-outline-info btn-sm"
 					><img src="/images/pencil-24px.svg" alt="button to edit article"
 				/></a>
-				<form
-					action="/articles/<%= article.id %>?_method=DELETE"
-					method="POST"
-				>
+				<form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
 					<button type="submit" class="btn btn-outline-danger btn-sm">
-						<img
-							src="/images/trash-24px.svg"
-							alt="button to delete article"
-						/>
+						<img src="/images/trash-24px.svg" alt="button to delete article" />
 					</button>
 				</form>
 			</small>
-
 		</div>
 	</div>
 	<% }) %>
