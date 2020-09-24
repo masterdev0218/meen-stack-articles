@@ -6,7 +6,11 @@ exports.article_list = async (req, res) => {
 		const articles = await Article.find().sort({ createdAt: 'desc' });
 		const totalArticles = articles.length;
 		const articlesString = articles.length === 1 ? ' article' : ' articles';
-		res.render('articles/index', { articles, totalArticles, articlesString });
+		res.render('articles/index', {
+			articles,
+			totalArticles,
+			articlesString,
+		});
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}

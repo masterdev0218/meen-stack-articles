@@ -4,6 +4,8 @@ const router = express.Router();
 const article_controller = require('../controllers/article.controllers');
 
 router.get('/new', article_controller.new_article);
+router.get('/about', (req, res) => res.render('articles/about', {title: 'About'}));
+router.get('/contact', (req, res) => res.render('articles/contact', {title: 'Contact'}));
 router.get('/edit/:id', article_controller.find_to_edit);
 router.get('/:slug', article_controller.find_to_show);
 router.post(

@@ -1,15 +1,50 @@
-<ul class="nav nav-tabs nav-justified">
+<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
 	<li class="nav-item">
-		<a class="nav-link active" href="/">Articles</a>
+		<a
+			class="nav-link <%= page_name === 'home' && 'active' %>"
+			id="home-tab"
+			data-toggle="tab"
+			href="/"
+			role="tab"
+			aria-controls="home"
+			aria-selected="true"
+			>Articles</a
+		>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="/articles/new"
-			>Create</a>
+		<a
+			class="nav-link <%= page_name === 'new' && 'active' %>"
+			id="new-tab"
+			data-toggle="tab"
+			href="/articles/new"
+			role="tab"
+			aria-controls="new"
+			aria-selected="false"
+			>New</a
+		>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="/articles/about">About</a>
+		<a
+			class="nav-link <%= page_name === 'about' && 'active' %>"
+			id="about-tab"
+			data-toggle="tab"
+			href="/articles/about"
+			role="tab"
+			aria-controls="about"
+			aria-selected="false"
+			>About</a
+		>
 	</li>
 	<li class="nav-item">
-		<a class="nav-link" href="/articles/contact">Contact</a>
+		<a
+			class="nav-link <%= page_name === 'contact' && 'active' %>"
+			id="contact-tab"
+			data-toggle="tab"
+			href="/articles/contact"
+			role="tab"
+			aria-controls="contact"
+			aria-selected="false"
+			>Contact</a
+		>
 	</li>
 </ul>
