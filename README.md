@@ -20,7 +20,7 @@
 
 ## :books: General info
 
-* The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features
+* The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
 * Partials used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
 
 ## :camera: Screenshots
@@ -36,7 +36,7 @@
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [marked](https://www.npmjs.com/package/marked) to convert between markdown and html
 
-* [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill publications cards for testing
+* [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill cards for testing
 
 ## :floppy_disk: Setup
 
@@ -44,18 +44,43 @@
 
 ## :computer: Code Examples
 
-*
+* extract from `controllers.js` to get length of articles array and convert this to a variable `totalArticles` to be used in `index.ejs` to show total number of articles. Variable `articlesString` also created in `controllers.js` and used in the html markup to show the word `article` or `articles`.
 
 ```javascript
+// Display articles list in date order
+exports.article_list = async (req, res) => {
+	try {
+		const articles = await Article.find().sort({ createdAt: 'desc' });
+		const totalArticles = articles.length;
+		const articlesString = articles.length === 1 ? ' article' : ' articles';
+		res.render('articles/index', {
+			articles,
+			totalArticles,
+			articlesString,
+		});
+	} catch (err) {
+		res.status(500).json({ message: err.message });
+	}
+};
+```
 
-
+```html
+		<div class="d-flex justify-content-center pt-3 pl-2">
+			<div class="alert alert-success border-dark p-2 mb-1" role="alert">
+				<p class="mb-0 text-center">
+					You have
+					<span class="badge badge-pill badge-light" style="font-size: 18px"
+						><%= totalArticles%></span
+					><%= articlesString %>
+				</p>
+			</div>
+		</div>
 ```
 
 ## :cool: Features
 
-* In dev - Front and backends are run with one command
-* backend code separates Express controller functions from routes
-* TO DO: Updating an article will automatically update the date so it goes to the front of the (date-sorted) notes list
+* The backend code separates Express controller functions from routes: routes forward requests to the applicable controllers and controllers read/write data using models.
+* Updating an article will automatically update the date so it goes to the front of the (date-sorted) notes list
 
 ## :clipboard: Status & To-Do List
 
@@ -66,6 +91,7 @@
 
 * [Web Dev Simplified: How To Build A Markdown Blog Using Node.js, Express, And MongoDB](https://www.youtube.com/watch?v=1NrHkjlWVhM)
 * [Building a Simple CRUD app with Node, Express, and MongoDB](https://zellwk.com/blog/crud-express-mongodb/)
+* [MDN Web DOcs: Express Tutorial Part 4: Routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
 
 ## :envelope: Contact
 

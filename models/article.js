@@ -9,13 +9,17 @@ const articleSchema = new mongoose.Schema({
 	title: {
 		type: String,
 		required: true,
+		maxlength: 50
 	},
-	description: {
+	summary: {
 		type: String,
+		required: true,
+		maxlength: 200
 	},
 	markdown: {
 		type: String,
 		required: true,
+		maxlength: 2000
 	},
 	createdAt: {
 		type: Date,

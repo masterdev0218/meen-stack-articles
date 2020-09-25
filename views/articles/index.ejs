@@ -1,8 +1,8 @@
 <%- include('partials/header', {title: "Index"}); %>
 <body>
-	<%- include('partials/navbar', {page_name: "home"}) %>
+	<%- include('partials/navbar', {page_name: "index"}) %>
 	<div class="container">
-		<div class="d-flex justify-content-center pt-3">
+		<div class="d-flex justify-content-center pt-3 pl-2">
 			<div class="alert alert-success border-dark p-2 mb-1" role="alert">
 				<p class="mb-0 text-center">
 					You have
@@ -16,7 +16,10 @@
 		<% articles.forEach(article => { %>
 		<div class="card card-shadow width-225px m-2">
 			<div class="card-body p-2">
-				<h5 class="card-title"><%= article.title %></h5>
+				<h5 class="card-title">Title: <%= article.title %></h5>
+				<h6 class="card-subtitle">
+					Summary: <%= article.summary %>
+				</h6>
 			</div>
 			<div class="card-footer p-2">
 				<small class="text-muted d-flex justify-content-between">
@@ -31,7 +34,7 @@
 
 					<a
 						href="articles/<%= article.slug %>"
-						class="btn btn-outline-dark btn-sm"
+						class="btn btn-outline-dark"
 						><img src="/images/view-24px.svg"
 					/></a>
 					<a
@@ -56,5 +59,4 @@
 		<% }) %>
 	</div>
 </body>
-
 <%- include('partials/footer'); %>
