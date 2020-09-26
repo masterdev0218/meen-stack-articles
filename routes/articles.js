@@ -7,9 +7,7 @@ router.get('/new', article_controller.new_article);
 router.get('/about', (req, res) =>
 	res.render('articles/about', { title: 'About' })
 );
-router.get('/contact', (req, res) =>
-	res.render('articles/contact', { title: 'Contact' })
-);
+router.get('/contact', article_controller.fetch_github_profile);
 router.get('/edit/:id', article_controller.find_to_edit);
 router.get('/:slug', article_controller.find_to_show);
 router.post(

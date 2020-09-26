@@ -1,4 +1,9 @@
+const env = require('dotenv');
+
+const fetch = require('node-fetch');
+
 const Article = require('../models/article');
+const githubUrl = 'https://api.github.com/users/AndrewJBateman';
 
 // Display articles list in date order
 exports.article_list = async (req, res) => {
@@ -71,6 +76,18 @@ exports.delete_article = async (req, res) => {
 	try {
 		await Article.findByIdAndDelete(req.params.id);
 		res.redirect('/');
+	} catch (err) {
+		res.status(500).json({ message: err.message });
+	}
+};
+
+// Fetch Github profile info to show in Contact page
+exports.fetch_github_profile = async (req, res) => {
+	try {
+		const response = await fetch(githubUrl);
+		const user = await response.json();
+		console.log('user: ', user);
+		res.render('articles/contact', { user })
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
