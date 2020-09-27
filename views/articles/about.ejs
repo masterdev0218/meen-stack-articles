@@ -8,34 +8,20 @@
 					<h5 class="card-title text-center mb-0">About App</h5>
 				</div>
 				<div class="card-body bg-light p-2">
-					<p
-						class="card-text"
-					>This app displays written articles on Bootstrap cards. It uses the MongoDB, Express, Vue & Node.js (MEVN) stack to allow the user to perform Create, Read, Update and Delete (CRUD) operations.</p>
-					<p
-						class="card-text"
-					>The 'Notes Hub' tells the user how many notes there are using the notes array.length property.</p>
-					<p
-						class="card-text"
-					>Once a note is added then the grid of notes is reloaded from the backend database. This was preferred to using an array.splice operation on the front-end data.</p>
-					<p
-						class="card-text"
-					>Axios, a promise-based HTTP client, is used to send/receive data asynchronously from the MongoDB backend.</p>
-					<p
-						class="card-text"
-					>The note create page includes a character countdown display to show the user how many characters are left from the 280 character maximum (same max. length as a Twitter tweet). There are buttons to Create (save to the database), Clear both input fields and Cancel to return to the Notes List page. The note edit page is very similar and also calculates the note body characters left.</p>
-				</div>
-				<div class="card-footer p-2" style="background-color: #cce5ff">
-					<div class="text-muted d-flex justify-content-center">
-						<button
-							type="button btn-outline"
-							class="btn btn-outline-dark"
-						>
-							<img
-								src="/images/arrow_back-24px.svg"
-								alt="button to navigate back to list of notes"
-							/>
-						</button>
-					</div>
+					<p class="card-text">
+						This app displays written articles on Bootstrap cards. It uses the
+						MongoDB, Express, Ejs & Node.js (MEEN) stack to allow the user to
+						perform Create, Read, Update and Delete (CRUD) operations.
+					</p>
+					<p class="card-text">
+						The 'Articles' page displays a responsive grid of article cards with the title and summary. The total number of articles is shown at the top and is derived from the backend array length. From each card footer the user can see the date the article was created and can view/edit or delete it.
+					</p>
+					<p class="card-text">
+						The 'New' page allows the user to create a new article and save it in the backend database. If the user presses cancel they are redirected back to the Articles page.
+					</p>
+					<p class="card-text">
+						The 'Contact' page displays data about the app author in a Bootstrap card. Data is fetched from the Github API using the npm module node-fetch. The card footer includes links to the author website, a contact card and Github profile.
+					</p>
 				</div>
 			</div>
 		</div>

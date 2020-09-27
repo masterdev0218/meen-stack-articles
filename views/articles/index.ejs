@@ -3,7 +3,11 @@
 	<%- include('partials/navbar', {page_name: "index"}) %>
 	<div class="container">
 		<div class="d-flex justify-content-center pt-3 pl-2">
-			<div class="alert alert-success border-dark p-2 mb-1" role="alert">
+			<div
+				class="alert alert-success border-dark p-2 mb-1"
+				style="background-color: #cce5ff; font-size: 18px"
+				role="alert"
+			>
 				<p class="mb-0 text-center">
 					You have
 					<span class="badge badge-pill badge-light" style="font-size: 18px"
@@ -17,24 +21,23 @@
 		<div class="card card-shadow width-225px m-2">
 			<div class="card-body p-2">
 				<h5 class="card-title">Title: <%= article.title %></h5>
-				<h6 class="card-subtitle">
-					Summary: <%= article.summary %>
-				</h6>
+				<h6 class="card-subtitle">Summary: <%= article.summary %></h6>
 			</div>
 			<div class="card-footer p-2">
-				<small class="text-muted d-flex justify-content-between">
+				<small class="d-flex justify-content-between">
 					<div class="d-flex align-items-center">
 						<img
 							src="/images/event_note-24px.svg"
 							alt="date article was created"
 							class="mr-1"
-						/>
-						<%= article.createdAt.toLocaleDateString() %>
+						/><span style="font-size: 14px"
+							><%= article.createdAt.toLocaleDateString() %></span
+						>
 					</div>
 
 					<a
 						href="articles/<%= article.slug %>"
-						class="btn btn-outline-dark"
+						class="btn btn-outline-dark px-1 py-0"
 						><img src="/images/view-24px.svg"
 					/></a>
 					<a

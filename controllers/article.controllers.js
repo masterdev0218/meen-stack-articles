@@ -86,7 +86,6 @@ exports.fetch_github_profile = async (req, res) => {
 	try {
 		const response = await fetch(githubUrl);
 		const user = await response.json();
-		console.log('user: ', user);
 		res.render('articles/contact', { user })
 	} catch (err) {
 		res.status(500).json({ message: err.message });

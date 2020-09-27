@@ -35,7 +35,7 @@
 * [Mongoose v5](https://mongoosejs.com/)
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [marked](https://www.npmjs.com/package/marked) to convert between markdown and html
-* [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data fromt he Github API
+* [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
 
 * [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill cards for testing
