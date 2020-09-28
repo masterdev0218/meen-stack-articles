@@ -22,6 +22,7 @@
 
 * The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
 * Partials used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
+* Article edit page: add image & 2nd nav menu and credit for image
 
 ## :camera: Screenshots
 
@@ -34,10 +35,11 @@
 * [Express v4](https://expressjs.com/) framework for Node.js
 * [Mongoose v5](https://mongoosejs.com/)
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
-* [marked](https://www.npmjs.com/package/marked) to convert between markdown and html
+* [marked v1](https://www.npmjs.com/package/marked) to convert markdown to html
+* [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for HTML
 * [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
-
+* [Unsplash images](https://source.unsplash.com/) - random images used for buidling article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
 * [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill cards for testing
 
 ## :floppy_disk: Setup

@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="d-flex justify-content-center pt-3 pl-2">
 			<div
-				class="alert alert-success border-dark p-2 mb-1"
+				class="alert alert-success border-dark px-2 py-1 mb-1"
 				style="background-color: #cce5ff; font-size: 18px"
 				role="alert"
 			>
@@ -17,11 +17,17 @@
 			</div>
 		</div>
 
+		<!--news cards-->
+		<div class="row">
+
+		</div>
+
 		<% articles.forEach(article => { %>
-		<div class="card card-shadow width-225px m-2">
+		<div class="card card-shadow m-2" style="max-width: 400px;">
+			<img src="<%= article.imageUrl %>" alt="article image" class="card-img-top px-0" />
 			<div class="card-body p-2">
-				<h5 class="card-title">Title: <%= article.title %></h5>
-				<h6 class="card-subtitle">Summary: <%= article.summary %></h6>
+				<h5 class="card-title"><%= article.title %></h5>
+				<h6 class="card-subtitle"><%= article.summary %></h6>
 			</div>
 			<div class="card-footer p-2">
 				<small class="d-flex justify-content-between">

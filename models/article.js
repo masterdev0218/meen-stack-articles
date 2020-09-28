@@ -6,6 +6,10 @@ const { JSDOM } = require('jsdom');
 const dompurify = createDomPurifier(new JSDOM().window);
 
 const articleSchema = new mongoose.Schema({
+	imageUrl: {
+		type: String,
+		required: true,
+	},
 	title: {
 		type: String,
 		required: true,
