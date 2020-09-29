@@ -23,12 +23,15 @@
 		</div>
 
 		<% articles.forEach(article => { %>
+		<!--card image and body-->
 		<div class="card card-shadow m-2" style="max-width: 400px;">
 			<img src="<%= article.imageUrl %>" alt="article image" class="card-img-top px-0" />
 			<div class="card-body p-2">
 				<h5 class="card-title"><%= article.title %></h5>
-				<h6 class="card-subtitle"><%= article.summary %></h6>
+				<p class="card-text"><%= article.summary %></p>
 			</div>
+
+			<!--card footer-->
 			<div class="card-footer p-2">
 				<small class="d-flex justify-content-between">
 					<div class="d-flex align-items-center">
@@ -63,7 +66,7 @@
 						</button>
 					</form>
 				</small>
-			</div>
+			</div><!--end of card footer-->
 		</div>
 		<% }) %>
 	</div>

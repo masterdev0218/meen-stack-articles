@@ -39,7 +39,7 @@
 * [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for HTML
 * [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
-* [Unsplash images](https://source.unsplash.com/) - random images used for buidling article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
+* [Unsplash images](https://source.unsplash.com/) - random images used for building article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
 * [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill cards for testing
 
 ## :floppy_disk: Setup

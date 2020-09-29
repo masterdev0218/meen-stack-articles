@@ -18,12 +18,12 @@ const articleSchema = new mongoose.Schema({
 	summary: {
 		type: String,
 		required: true,
-		maxlength: 200
+		maxlength: 500
 	},
 	markdown: {
 		type: String,
 		required: true,
-		maxlength: 2000
+		maxlength: 5000
 	},
 	createdAt: {
 		type: Date,

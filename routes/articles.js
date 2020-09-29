@@ -26,9 +26,11 @@ function saveArticleAndRedirect(path) {
 	return async (req, res) => {
 		let article = req.article;
 		// let { title, summary, markdown } = req.article
+		article.imageUrl = req.body.imageUrl
 		article.title = req.body.title;
 		article.summary = req.body.summary;
 		article.markdown = req.body.markdown;
+		console.log('article', article);
 		try {
 			article = await article.save();
 			res.redirect(`/articles/${article.slug}`);

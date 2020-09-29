@@ -10,6 +10,17 @@
 	/>
 </div>
 <div class="form-group">
+	<label for="imageUrl">Image Url</label>
+	<input
+		required
+		value="<%= article.imageUrl %>"
+		type="text"
+		name="imageUrl"
+		id="imageUrl"
+		class="form-control"
+	/>
+</div>
+<div class="form-group">
 	<label for="summary">Summary</label>
 	<textarea name="summary" id="summary" class="form-control">
     <%= article.summary %>
