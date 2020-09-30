@@ -2,7 +2,6 @@
 <body>
 	<%- include('partials/navbar', {page_name: "new"}) %>
 	<div class="container">
-		<h2 class="mb-4 pt-4 text-center">New Article</h2>
 		<form action="/articles" method="POST">
 			<%- include ("partials/fields") %>
 		</form>

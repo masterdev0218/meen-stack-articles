@@ -12,28 +12,20 @@
 			class="card-img-top px-0"
 		/>
 		<div class="card-header">
-			<h5 class="card-title text-center m-0"><%= article.title %></h5>
+			<h6 class="card-title text-center m-0"><%= article.title %></h6>
 		</div>
 		<div class="card-body">
-			<!-- <h5 class="card-title"><%= article.title %></h5> -->
-			<p class="card-text" style="font-family: Verdana; font-style: italic;"><%= article.summary %></p>
+			<p class="card-text" style="font-family: Verdana; font-style: italic">
+				<%= article.summary %>
+			</p>
 			<p class="card-text"><%- article.sanitizedHtml %></p>
-			<footer class="blockquote-footer text-center">Article created: <cite title="Source Title"><%= article.createdAt.toLocaleDateString() %></cite></footer>
-			<!-- <div class="text-muted mb-2">
-				<%= article.createdAt.toLocaleDateString() %>
-			</div> -->
 		</div>
-
-		<!-- <h1 class="mb-1"><%= article.title %></h1> -->
-		<!-- <div class="text-muted mb-2">
-			<%= article.createdAt.toLocaleDateString() %>
-		</div> -->
-		<!-- <a href="/" class="btn btn-secondary">All Articles</a>
-		<a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a> -->
-
-		<!-- <div>
-		<%- article.sanitizedHtml %>
-	</div> -->
+		<footer class="blockquote-footer text-center">
+			Article created:
+			<cite title="Source Title"
+				><%= article.createdAt.toLocaleDateString() %></cite
+			>
+		</footer>
 	</div>
 
 	<%- include ("partials/footer") %>

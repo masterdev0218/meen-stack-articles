@@ -21,14 +21,24 @@
 	/>
 </div>
 <div class="form-group">
-	<label for="summary">Summary</label>
-	<textarea name="summary" id="summary" class="form-control">
+	<label for="summary">Summary (max. )</label>
+	<textarea
+		required
+		name="summary"
+		id="summary"
+		class="form-control"
+		placeholder="Type summary (max. 400 characters)"
+		rows="4"
+		aria-label="Enter article summary"
+	>
     <%= article.summary %>
   </textarea>
 </div>
 <div class="form-group">
-	<label for="markdown">Markdown</label>
-	<textarea required name="markdown" id="markdown" class="form-control">
+	<label for="markdown">Article Body</label>
+	<textarea required name="markdown" id="markdown" class="form-control" placeholder="Type summary (max. 2000 characters)"
+	rows="4"
+	aria-label="Enter article main body">
     <%= article.markdown %>
   </textarea>
 </div>
