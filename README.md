@@ -22,7 +22,7 @@
 
 * The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
 * Partials used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
-* Article edit page: add image & 2nd nav menu and credit for image
+* Article edit page: 2nd nav menu and credit for image
 
 ## :camera: Screenshots
 

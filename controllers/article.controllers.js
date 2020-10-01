@@ -4,6 +4,9 @@ const fetch = require('node-fetch');
 
 const Article = require('../models/article');
 const githubUrl = 'https://api.github.com/users/AndrewJBateman';
+const maxTitleLength = 80;
+const maxSummaryLength = 400;
+const maxMarkdownLength = 2000;
 
 // Display articles list in date order
 exports.article_list = async (req, res) => {
@@ -24,7 +27,10 @@ exports.article_list = async (req, res) => {
 // Display new article
 exports.new_article = async (req, res) => {
 	try {
-		res.render('articles/new', { article: new Article() });
+		// const maxTitleLength = 80;
+		// const maxSummaryLength = 400;
+		// const maxMarkdownLength = 2000;
+		res.render('articles/new', { article: new Article(), maxTitleLength, maxMarkdownLength, maxSummaryLength });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -34,7 +40,7 @@ exports.new_article = async (req, res) => {
 exports.find_to_edit = async (req, res) => {
 	try {
 		const article = await Article.findById(req.params.id);
-		res.render('articles/edit', { article: article });
+		res.render('articles/edit', { article: article, maxTitleLength, maxMarkdownLength, maxSummaryLength });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
