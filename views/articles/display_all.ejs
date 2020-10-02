@@ -2,31 +2,33 @@
 
 <body>
 	<%- include('partials/navbar', {page_name: "display_all"}) %>
-	<div class="container">
+	<div class="d-flex justify-content-center">
 		<!--card image and body-->
-		<div class="card card-shadow m-2" style="max-width: 700px">
+		<div class="card card-shadow m-2" style="max-width: 80%">
 			<img
-				src="<%= article.imageUrl %>"
+				src="<%= (article.imageUrl && article.imageUrl.length) ? article.imageUrl : 'https://source.unsplash.com/400x300/?technology' %>"
 				alt="article image"
 				class="card-img-top px-0"
 			/>
 			<div class="card-header">
 				<h6 class="card-title text-center m-0"><%= article.title %></h6>
+				<p class="mb-0 text-center">
+					<small
+						>Created:
+						<cite
+							><%= article.createdAt.toLocaleDateString('en-GB', { year:
+							'numeric', month: 'short', day: 'numeric' }) %></cite
+						></small
+					>
+				</p>
 			</div>
-			<div class="card-body">
+			<div class="card-body p-2">
 				<p class="card-text" style="font-family: Verdana; font-style: italic">
 					<%= article.summary %>
 				</p>
 				<p class="card-text"><%- article.sanitizedHtml %></p>
 			</div>
-			<footer class="blockquote-footer text-center">
-				Article created:
-				<cite title="Source Title"
-					><%= article.createdAt.toLocaleDateString() %></cite
-				>
-			</footer>
 		</div>
-
 		<%- include ("partials/footer") %>
 	</div>
 

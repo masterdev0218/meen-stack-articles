@@ -14,10 +14,10 @@ exports.article_list = async (req, res) => {
 		const articles = await Article.find().sort({ createdAt: 'desc' });
 		const totalArticles = articles.length;
 		const articlesString = articles.length === 1 ? ' article' : ' articles';
-		res.render('articles/index', {
+		res.status(200).render('articles/index', {
 			articles,
 			totalArticles,
-			articlesString,
+			articlesString
 		});
 	} catch (err) {
 		res.status(500).json({ message: err.message });
@@ -30,7 +30,7 @@ exports.new_article = async (req, res) => {
 		// const maxTitleLength = 80;
 		// const maxSummaryLength = 400;
 		// const maxMarkdownLength = 2000;
-		res.render('articles/new', { article: new Article(), maxTitleLength, maxMarkdownLength, maxSummaryLength });
+		res.status(200).render('articles/new', { article: new Article(), maxTitleLength, maxMarkdownLength, maxSummaryLength });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -40,7 +40,7 @@ exports.new_article = async (req, res) => {
 exports.find_to_edit = async (req, res) => {
 	try {
 		const article = await Article.findById(req.params.id);
-		res.render('articles/edit', { article: article, maxTitleLength, maxMarkdownLength, maxSummaryLength });
+		res.status(200).render('articles/edit', { article: article, maxTitleLength, maxMarkdownLength, maxSummaryLength });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -51,7 +51,7 @@ exports.find_to_show = async (req, res) => {
 	try {
 		const article = await Article.findOne({ slug: req.params.slug });
 		if (article == null) res.redirect('/');
-		res.render('articles/display_all', { article: article });
+		res.status(200).render('articles/display_all', { article: article });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -71,6 +71,7 @@ exports.presave_new_article = async (req, res, next) => {
 exports.presave_edited_article = async (req, res, next) => {
 	try {
 		req.article = await Article.findById(req.params.id);
+		res.status(200);
 		next();
 	} catch (err) {
 		res.status(500).json({ message: err.message });
@@ -81,7 +82,7 @@ exports.presave_edited_article = async (req, res, next) => {
 exports.delete_article = async (req, res) => {
 	try {
 		await Article.findByIdAndDelete(req.params.id);
-		res.redirect('/');
+		res.status(200).redirect('/');
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -92,7 +93,7 @@ exports.fetch_github_profile = async (req, res) => {
 	try {
 		const response = await fetch(githubUrl);
 		const user = await response.json();
-		res.render('articles/contact', { user })
+		res.status(200).render('articles/contact', { user })
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}

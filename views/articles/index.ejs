@@ -27,8 +27,8 @@
 					src="<%= article.imageUrl %>"
 					alt="article image"
 				/>
-				<div class="card-header">
-					<h6 class="card-title text-center m-0"><%= article.title %></h6>
+				<div class="card-header p-2">
+					<h5 class="card-title text-center m-0"><%= article.title %></h5>
 				</div>
 				<div class="card-body p-2">
 					<p class="card-text" style="font-family: Verdana; font-style: italic;"><%= article.summary %></p>
@@ -43,7 +43,7 @@
 								alt="date article was created"
 								class="mr-1"
 							/><span style="font-size: 14px"
-								><%= article.createdAt.toLocaleDateString() %></span
+								><%= article.createdAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' }) %></span
 							>
 						</div>
 
