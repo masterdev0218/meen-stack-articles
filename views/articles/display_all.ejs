@@ -1,15 +1,38 @@
 <%- include("partials/header", {title: "Display All"}) %>
 
+<style>
+	/* Container holding the image and the text */
+	.image-div {
+		position: relative;
+		text-align: center;
+		color: white;
+	}
+
+	/* Bottom right text */
+	.bottom-right {
+		font-size: 12px;
+		position: absolute;
+		bottom: 8px;
+		right: 8px;
+		background-color: darkslategrey;
+		opacity: 0.7;
+		padding: 0 4px;
+	}
+</style>
+
 <body>
 	<%- include('partials/navbar', {page_name: "display_all"}) %>
 	<div class="d-flex justify-content-center">
 		<!--card image and body-->
-		<div class="card card-shadow m-2" style="max-width: 80%">
-			<img
-				src="<%= (article.imageUrl && article.imageUrl.length) ? article.imageUrl : 'https://source.unsplash.com/400x300/?technology' %>"
-				alt="article image"
-				class="card-img-top px-0"
-			/>
+		<div class="card card-shadow m-2" style="max-width: 1000px">
+			<div class="image-div">
+				<img
+					src="<%= (article.imageUrl && article.imageUrl.length) ? article.imageUrl : 'https://source.unsplash.com/400x300/?technology' %>"
+					alt="article image"
+					class="card-img-top px-0"
+				/>
+				<div class="bottom-right"><%= article.imageCredit %></div>
+			</div>
 			<div class="card-header">
 				<h6 class="card-title text-center m-0"><%= article.title %></h6>
 				<p class="mb-0 text-center">

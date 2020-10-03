@@ -10,6 +10,10 @@ const articleSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	imageCredit: {
+		type: String,
+		required: true,
+	},
 	title: {
 		type: String,
 		required: true,

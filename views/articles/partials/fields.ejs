@@ -1,62 +1,80 @@
-<div class="form-group">
-	<label for="title">Title</label
-	><small id="titleHelp" class="text-muted">
-		(4 - <%= maxTitleLength %> characters)
-	</small>
-	<input
-		required
-		value="<%= article.title %>"
-		type="text"
-		name="title"
-		id="title"
-		class="form-control"
-		aria-label="Enter article title"
-	/>
-</div>
-<div class="form-group">
-	<label for="imageUrl">Image Url</label><small id="titleHelp" class="text-muted">
-		(https://...)
-	</small>
-	<input
-		required
-		value="<%= article.imageUrl %>"
-		type="text"
-		name="imageUrl"
-		id="imageUrl"
-		class="form-control"
-		aria-label="Enter article image url"
-	/>
-</div>
-<div class="form-group">
-	<label for="summary">Summary</label><small id="titleHelp" class="text-muted">
-		(4 - <%= maxSummaryLength %> characters)
-	</small>
-	<textarea
-		required
-		name="summary"
-		id="summary"
-		class="form-control"
-		rows="4"
-		aria-label="Enter article summary"
-	>
-<%= article.summary %></textarea
-	>
-</div>
-<div class="form-group">
-	<label for="markdown">Article Body</label><small id="titleHelp" class="text-muted">
-		(4 - <%= maxMarkdownLength %> characters using Markup)
-	</small>
-	<textarea
-		required
-		name="markdown"
-		id="markdown"
-		class="form-control"
-		rows="4"
-		aria-label="Enter article main body"
-	>
-<%= article.markdown %></textarea
-	>
-</div>
+<body>
+	<div class="form-group">
+		<label for="title">Title</label
+		><small id="titleHelp" class="text-muted">
+			(4 - <%= maxTitleLength %> characters)
+		</small>
+		<input
+			required
+			value="<%= article.title %>"
+			type="text"
+			name="title"
+			id="title"
+			class="form-control"
+			aria-label="Enter article title"
+		/>
+	</div>
+	<div class="form-group">
+		<label for="imageUrl">Image Url</label
+		><small id="titleHelp" class="text-muted"> (https://...) </small>
+		<input
+			required
+			value="<%= article.imageUrl %>"
+			type="text"
+			name="imageUrl"
+			id="imageUrl"
+			class="form-control"
+			aria-label="Enter article image url"
+		/>
+	</div>
+	<div class="form-group">
+		<label for="imageCredit">Image Credit</label
+		><small id="titleHelp" class="text-muted">
+			(who created the image?)
+		</small>
+		<input
+			required
+			value="<%= article.imageCredit %>"
+			type="text"
+			name="imageCredit"
+			id="imageCredit"
+			class="form-control"
+			aria-label="Enter article image credit"
+		/>
+	</div>
+	<div class="form-group">
+		<label for="summary">Summary</label
+		><small id="titleHelp" class="text-muted">
+			(4 - <%= maxSummaryLength %> characters)
+		</small>
+		<textarea
+			required
+			name="summary"
+			id="summary"
+			class="form-control"
+			rows="4"
+			aria-label="Enter article summary"
+		>
+	<%= article.summary %></textarea
+		>
+	</div>
+	<div class="form-group">
+		<label for="markdown">Article Body</label
+		><small id="titleHelp" class="text-muted">
+			(4 - <%= maxMarkdownLength %> characters using Markup)
+		</small>
+		<textarea
+			required
+			name="markdown"
+			id="markdown"
+			class="form-control"
+			rows="4"
+			aria-label="Enter article main body"
+		>
+	<%= article.markdown %></textarea
+		>
+	</div>
 
-<a href="/" class="btn btn-sm btn-danger">Cancel</a>
-<button type="submit" class="btn btn-sm btn-primary">Save</button>
+	<a href="/" class="btn btn-sm btn-danger">Cancel</a>
+	<button type="submit" class="btn btn-sm btn-primary">Save</button>
+</body>

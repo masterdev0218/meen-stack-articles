@@ -1,4 +1,25 @@
 <%- include('partials/header', {title: "Index"}); %>
+
+<style>
+	/* Container holding the image and the text */
+	.image-div {
+		position: relative;
+		text-align: center;
+		color: white;
+	}
+
+	/* Bottom right text */
+	.bottom-right {
+		font-size: 12px;
+		position: absolute;
+		bottom: 8px;
+		right: 8px;
+		background-color: darkslategrey;
+		opacity: 0.7;
+		padding: 0 4px;
+	}
+</style>
+
 <body>
 	<%- include('partials/navbar', {page_name: "index"}) %>
 	<div>
@@ -18,20 +39,25 @@
 		</div>
 
 		<!--article cards-->
-		<section class="d-flex flex-wrap justify-content-center mb-2 mt-2 mx-auto">
+		<section class="d-flex flex-wrap justify-content-left mb-2 mt-2 mx-auto">
 			<% articles.forEach(article => { %>
 			<!--card image and body-->
 			<div class="card card-shadow m-2" style="max-width: 400px;">
-				<img
-					class="card-img-top"
-					src="<%= article.imageUrl %>"
-					alt="article image"
-				/>
+				<div class="image-div">
+					<img
+						class="card-img-top"
+						src="<%= article.imageUrl %>"
+						alt="article image"
+					/>
+					<div class="bottom-right"><%= article.imageCredit %></div>
+				</div>
 				<div class="card-header p-2">
 					<h5 class="card-title text-center m-0"><%= article.title %></h5>
 				</div>
 				<div class="card-body p-2">
-					<p class="card-text" style="font-family: Verdana; font-style: italic;"><%= article.summary %></p>
+					<p class="card-text" style="font-family: Verdana; font-style: italic">
+						<%= article.summary %>
+					</p>
 				</div>
 
 				<!--card footer-->
@@ -43,7 +69,8 @@
 								alt="date article was created"
 								class="mr-1"
 							/><span style="font-size: 14px"
-								><%= article.createdAt.toLocaleDateString('en-GB', { year: 'numeric', month: 'short', day: 'numeric' }) %></span
+								><%= article.createdAt.toLocaleDateString('en-GB', { year:
+								'numeric', month: 'short', day: 'numeric' }) %></span
 							>
 						</div>
 

@@ -27,6 +27,7 @@ function saveArticleAndRedirect(path) {
 		let article = req.article;
 		// let { title, summary, markdown } = req.article
 		article.imageUrl = req.body.imageUrl;
+		article.imageCredit = req.body.imageCredit;
 		article.title = req.body.title;
 		article.summary = req.body.summary;
 		article.markdown = req.body.markdown;
