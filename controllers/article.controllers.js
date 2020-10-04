@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 
 const Article = require('../models/article');
 const githubUrl = 'https://api.github.com/users/AndrewJBateman';
-const maxTitleLength = 80;
+const maxTitleLength = 40;
 const maxSummaryLength = 400;
 const maxMarkdownLength = 2000;
 

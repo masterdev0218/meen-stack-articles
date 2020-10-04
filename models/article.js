@@ -17,7 +17,7 @@ const articleSchema = new mongoose.Schema({
 	title: {
 		type: String,
 		required: true,
-		maxlength: 80
+		maxlength: 40
 	},
 	summary: {
 		type: String,

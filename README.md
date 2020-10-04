@@ -21,7 +21,12 @@
 ## :books: General info
 
 * The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
-* Partials used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
+* Partials were used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
+* Index (home) page: Article immages with summaries are displayed in a responsive grid so they wrap around nicely as the screen size changes. The number of articles is displayed at the top using the articles array length. Each card footer shows the creation date, formatted using the Javascript 'toLocaleDateString' method. There are also buttons to redirect to article view-all and edt pages. There is also a delete button - add alert are you sure
+* New Article page:
+* About page:
+* Contact page:
+
 * Article edit page: 2nd nav menu and credit for image
 
 ## :camera: Screenshots

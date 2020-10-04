@@ -1,6 +1,6 @@
 <body>
 	<div class="form-group">
-		<label for="title">Title</label
+		<label class="mb-1" for="title">Title</label
 		><small id="titleHelp" class="text-muted">
 			(4 - <%= maxTitleLength %> characters)
 		</small>
@@ -11,11 +11,12 @@
 			name="title"
 			id="title"
 			class="form-control"
+			style="max-width: 350px;"
 			aria-label="Enter article title"
 		/>
 	</div>
 	<div class="form-group">
-		<label for="imageUrl">Image Url</label
+		<label class="mb-1" for="imageUrl">Image Url</label
 		><small id="titleHelp" class="text-muted"> (https://...) </small>
 		<input
 			required
@@ -28,7 +29,7 @@
 		/>
 	</div>
 	<div class="form-group">
-		<label for="imageCredit">Image Credit</label
+		<label class="mb-1" for="imageCredit">Image Credit</label
 		><small id="titleHelp" class="text-muted">
 			(who created the image?)
 		</small>
@@ -43,7 +44,7 @@
 		/>
 	</div>
 	<div class="form-group">
-		<label for="summary">Summary</label
+		<label class="mb-1" for="summary">Summary</label
 		><small id="titleHelp" class="text-muted">
 			(4 - <%= maxSummaryLength %> characters)
 		</small>
@@ -59,7 +60,7 @@
 		>
 	</div>
 	<div class="form-group">
-		<label for="markdown">Article Body</label
+		<label class="mb-1" for="markdown">Article Body</label
 		><small id="titleHelp" class="text-muted">
 			(4 - <%= maxMarkdownLength %> characters using Markup)
 		</small>
@@ -75,6 +76,30 @@
 		>
 	</div>
 
-	<a href="/" class="btn btn-sm btn-danger">Cancel</a>
-	<button type="submit" class="btn btn-sm btn-primary">Save</button>
+	<!-- <a href="/" class="btn btn-sm btn-danger">Cancel</a>
+	<button type="submit" class="btn btn-sm btn-primary">Save</button> -->
+
+	<div class="d-flex justify-content-around bg-light">
+		<div class="p-3">
+			<a
+				href="/"
+				class="btn btn-sm btn-danger"
+				style="width: 80px"
+				><span style="color: fff;">Cancel</span></a
+			>
+		</div>
+
+		<div class="p-3">
+			<button type="submit" class="btn btn-sm btn-dark" style="width: 80px;">Save</button>
+			<!-- <a
+				href="https://expressjs.com/"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="btn btn-sm btn-outline-success p-1"
+				style="width: 65px;"
+				><span style="color: #343A40;">Express</span></a
+			> -->
+		</div>
+	</div>
+
 </body>
