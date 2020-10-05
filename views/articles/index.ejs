@@ -18,6 +18,11 @@
 		opacity: 0.7;
 		padding: 0 4px;
 	}
+
+	/* a.custom-card,
+	a.custom-card:hover {
+		color: inherit;
+	} */
 </style>
 
 <body>
@@ -38,11 +43,16 @@
 			</div>
 		</div>
 
-		<!--article cards-->
+		<!--article cards array-->
 		<section class="d-flex flex-wrap justify-content-left mb-2 mt-2 mx-auto">
 			<% articles.forEach(article => { %>
 			<!--card image and body-->
-			<div class="card rounded card-shadow m-2" style="max-width: 400px;">
+			<!-- <a href="" class="custom-card"> -->
+			<div
+				class="card rounded card-shadow m-2"
+				style="max-width: 400px"
+				href="articles/<%= article.slug %>"
+			>
 				<div class="image-div">
 					<img
 						class="card-img-top"
@@ -56,12 +66,17 @@
 				</div>
 				<div class="card-body p-2">
 					<p class="card-text" style="font-family: Verdana; font-style: italic">
-						<%= article.summary %>
+						<%= article.summary %><a
+							href="articles/<%= article.slug %>"
+							class="stretched-link"
+						>
+							Read more...</a
+						>
 					</p>
 				</div>
 
 				<!--card footer-->
-				<div class="card-footer p-2">
+				<!-- <div class="card-footer p-2">
 					<small class="d-flex justify-content-between">
 						<div class="d-flex align-items-center">
 							<img
@@ -96,9 +111,10 @@
 							</button>
 						</form>
 					</small>
-				</div>
+				</div> -->
 				<!--end of card footer-->
 			</div>
+			<!-- </a> -->
 			<% }); %>
 		</section>
 	</div>
