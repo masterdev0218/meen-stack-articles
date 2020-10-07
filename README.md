@@ -43,7 +43,7 @@
 * [Mongoose v5](https://mongoosejs.com/)
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [marked v1](https://www.npmjs.com/package/marked) to convert markdown to html
-* [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for HTML
+* [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
 * [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
 * [Unsplash images](https://source.unsplash.com/) - random images used for building article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300

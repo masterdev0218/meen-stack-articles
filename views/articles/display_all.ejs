@@ -20,16 +20,6 @@
 	}
 </style>
 
-<script>
-	function confirmation() {
-		let result = confirm('Are you sure to delete this article?');
-		if (result) {
-			console.log('test if');
-		}
-		console.log('test else');
-	}
-</script>
-
 <body>
 	<%- include('partials/navbar', {page_name: "display_all"}) %>
 	<div class="d-flex justify-content-center">
@@ -67,8 +57,6 @@
 				/></a>
 				<a
 					href="/articles/edit/<%= article.id %>"
-					target="_blank"
-					rel="noopener noreferrer"
 					class="btn btn-sm btn-outline-primary"
 					style="width: 60px"
 					><img src="/images/pencil-24px.svg"

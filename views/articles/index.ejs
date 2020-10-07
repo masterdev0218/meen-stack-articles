@@ -48,7 +48,7 @@
 		<section class="d-flex flex-wrap justify-content-left mb-2 mt-2 mx-auto">
 			<% articles.forEach(article => { %>
 			<!--card image and body-->
-			<a href="articles/<%= article.slug %>" class="custom-card">
+			<a href="articles/<%= article.slug %>" class="custom-card mb-3">
 				<div
 					class="card rounded card-shadow m-2 h-100"
 					style="max-width: 400px"
@@ -60,13 +60,7 @@
 							src="<%= article.imageUrl %>"
 							alt="article image"
 						/>
-						<div class="bottom-right">
-<!-- 							<img
-								src="/images/event_note-24px.svg"
-								alt="date article was created"
-								class="mr-1 mb-1"
-							/> -->Image: <%= article.imageCredit %>
-						</div>
+						<div class="bottom-right">>Image: <%= article.imageCredit %></div>
 					</div>
 					<div class="card-header p-2">
 						<h5 class="card-title text-center m-0"><%= article.title %></h5>
