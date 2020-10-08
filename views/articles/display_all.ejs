@@ -31,7 +31,7 @@
 					alt="article image"
 					class="card-img-top px-0"
 				/>
-				<div class="bottom-right"><%= article.imageCredit %></div>
+				<div class="bottom-right">Image: <%= article.imageCredit %></div>
 			</div>
 			<div class="card-header">
 				<h6 class="card-title text-center m-0"><%= article.title %></h6>
@@ -46,10 +46,14 @@
 				</p>
 			</div>
 			<div class="card-body p-2">
+				<h5 style="color: #0d47a1; text-decoration: underline">Summary</h5>
 				<p class="card-text" style="font-family: Verdana; font-style: italic">
 					<%= article.summary %>
 				</p>
-				<p class="card-text"><%- article.sanitizedHtml %></p>
+				<h5 class="mb-0" style="color: #0d47a1; text-decoration: underline">Main Text</h5>
+				<p class="card-text" style="font-family: Verdana">
+					<%- article.sanitizedHtml %>
+				</p>
 			</div>
 			<div class="card-footer d-flex justify-content-around">
 				<a href="/" class="btn btn-sm btn-outline-dark" style="width: 60px"

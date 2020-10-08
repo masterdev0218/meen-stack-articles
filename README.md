@@ -24,7 +24,7 @@
 * Partials were used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
 * Index (home) page: Article immages with summaries are displayed in a responsive grid so they wrap around nicely as the screen size changes. The number of articles is displayed at the top using the articles array length.
 * Display_all Page: The footer shows the creation date, formatted using the Javascript 'toLocaleDateString' method. There are also buttons to redirect to article view-all and edt pages. There is also a delete button with a user confirmation alert.
-* Edit Page: **Foooter to be completed**
+* Edit Page: Add updated date to database? currently date is not changing when article is updated.
 * New Article page: User can create a new article by filling in validated form fields
 * About page:
 * Contact page:
