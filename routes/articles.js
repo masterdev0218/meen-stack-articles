@@ -31,6 +31,7 @@ function saveArticleAndRedirect(path) {
 		article.title = req.body.title;
 		article.summary = req.body.summary;
 		article.markdown = req.body.markdown;
+		article.createdAt = Date.now();
 		try {
 			article = await article.save();
 			res.redirect(`/articles/${article.slug}`);

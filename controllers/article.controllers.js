@@ -1,4 +1,7 @@
 const env = require('dotenv');
+const dayjs = require('dayjs');
+const relativeTime = require('dayjs/plugin/relativeTime');
+dayjs.extend(relativeTime);
 
 const fetch = require('node-fetch');
 
@@ -17,7 +20,7 @@ exports.article_list = async (req, res) => {
 		res.status(200).render('articles/index', {
 			articles,
 			totalArticles,
-			articlesString
+			articlesString,
 		});
 	} catch (err) {
 		res.status(500).json({ message: err.message });
@@ -30,7 +33,14 @@ exports.new_article = async (req, res) => {
 		// const maxTitleLength = 80;
 		// const maxSummaryLength = 400;
 		// const maxMarkdownLength = 2000;
-		res.status(200).render('articles/new', { article: new Article(), maxTitleLength, maxMarkdownLength, maxSummaryLength });
+		res
+			.status(200)
+			.render('articles/new', {
+				article: new Article(),
+				maxTitleLength,
+				maxMarkdownLength,
+				maxSummaryLength,
+			});
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -40,7 +50,19 @@ exports.new_article = async (req, res) => {
 exports.find_to_edit = async (req, res) => {
 	try {
 		const article = await Article.findById(req.params.id);
-		res.status(200).render('articles/edit', { article: article, maxTitleLength, maxMarkdownLength, maxSummaryLength });
+		let dateNow = dayjs();
+		let articleDate = article.createdAt;
+		let articleTimeAgo = dateNow.from(articleDate, true);
+		console.log(str);
+		res
+			.status(200)
+			.render('articles/edit', {
+				article: article,
+				articleTimeAgo,
+				maxTitleLength,
+				maxMarkdownLength,
+				maxSummaryLength,
+			});
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
@@ -93,7 +115,7 @@ exports.fetch_github_profile = async (req, res) => {
 	try {
 		const response = await fetch(githubUrl);
 		const user = await response.json();
-		res.status(200).render('articles/contact', { user })
+		res.status(200).render('articles/contact', { user });
 	} catch (err) {
 		res.status(500).json({ message: err.message });
 	}
