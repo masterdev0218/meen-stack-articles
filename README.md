@@ -22,12 +22,12 @@
 
 * The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
 * Partials were used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
-* Index (home) page: Article immages with summaries are displayed in a responsive grid so they wrap around nicely as the screen size changes. The number of articles is displayed at the top using the articles array length.
-* Display_all Page: The footer shows the creation date, formatted using the Javascript 'toLocaleDateString' method. There are also buttons to redirect to article view-all and edt pages. There is also a delete button with a user confirmation alert.
-* Edit Page: Add updated date to database? currently date is not changing when article is updated.
+* Index (home) page: Article images with summaries are displayed in a responsive grid so they wrap around nicely as the screen size changes. The number of articles is displayed at the top using the articles array length.
+* Display_all Page: The header shows the creation date, formatted using the Javascript 'toLocaleDateString' method. The footer has buttons to redirect back to the home page and to the article edit page. There is also an article delete button with a user confirmation alert.
+* Article Edit Page: User can change all article fields. Date will update automatically to todays date. Footer has edit cancel and save buttons.
 * New Article page: User can create a new article by filling in validated form fields
-* About page:
-* Contact page:
+* About page: Displays information about the app. Footer has links to the 4 MEEN full-stack technologies used.
+* Contact page: Displays Github API data on app author with links to personal website and contact page.
 
 * Article edit page: 2nd nav menu and credit for image
 
@@ -40,14 +40,14 @@
 * [EJS v3](https://ejs.co/#promo) Embedded Javascript templating to generate HTML markup
 * [Express method-override](http://expressjs.com/en/resources/middleware/method-override.html) to be able to use HTTP verbs PUT or DELETE
 * [Express v4](https://expressjs.com/) framework for Node.js
-* [Mongoose v5](https://mongoosejs.com/)
+* [Mongoose v5](https://mongoosejs.com/) object modelling for Node.js
 * [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [marked v1](https://www.npmjs.com/package/marked) to convert markdown to html
 * [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
 * [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
 * [Unsplash images](https://source.unsplash.com/) - random images used for building article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
-* [blindtextgenerator Lorem Ipsum](https://www.blindtextgenerator.com/lorem-ipsum) to create text to fill cards for testing
+* [Day.js v1](https://day.js.org/en/) used with [relative time](https://day.js.org/docs/en/display/from-now#list-of-breakdown-range) plugin to calculate how long ago article was written.
 
 ## :floppy_disk: Setup
 
@@ -55,7 +55,7 @@
 
 ## :computer: Code Examples
 
-* extract from `controllers.js` to get length of articles array and convert this to a variable `totalArticles` to be used in `index.ejs` to show total number of articles. Variable `articlesString` also created in `controllers.js` and used in the html markup to show the word `article` or `articles`.
+* extract from `controllers.js` to get length of articles array and convert this to a variable `totalArticles` to be used in `index.ejs` to show total number of articles. Variable `articlesString` also created in `controllers.js` and used in the HTML markup to show the word `article` or `articles`.
 
 ```javascript
 // Display articles list in date order

@@ -13,12 +13,12 @@
 					<%- include ("partials/fields", { maxTitleLength, maxMarkdownLength,
 					maxSummaryLength }) %>
 					<div class="card-footer d-flex justify-content-around">
-						<div class="p-3">
-							<a href="/" class="btn btn-sm btn-danger" style="width: 65px;"
+						<div>
+							<a href="/" class="btn btn-sm btn-danger" style="width: 65px;" onclick="return confirm('Are you sure you want to cancel? - you will lose your edits')"
 								><span style="color: fff; font-size: 16px;">Cancel</span></a
 							>
 						</div>
-						<div class="p-3">
+						<div>
 							<button
 								type="submit"
 								class="btn btn-sm btn-dark"

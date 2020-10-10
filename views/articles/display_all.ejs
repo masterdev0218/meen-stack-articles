@@ -33,14 +33,17 @@
 				/>
 				<div class="bottom-right">Image: <%= article.imageCredit %></div>
 			</div>
-			<div class="card-header">
-				<h6 class="card-title text-center m-0"><%= article.title %></h6>
-				<p class="mb-0 text-center">
+			<div class="card-header" style="background-color: #455A64;">
+				<h6 class="card-title text-center m-0" style="color: #fff"><%= article.title %></h6>
+				<p class="mb-0 text-center" style="color: #fff">
 					<small
-						><img src="/images/schedule-24px.svg" class="mb-1" style="transform: scale(0.75);"
-						/><cite
-							><%= article.createdAt.toLocaleDateString('en-GB', { year:
-							'numeric', month: 'short', day: 'numeric' }) %></cite
+						><img
+							src="/images/event_note-24px.svg"
+							class="mb-1"
+							style="transform: scale(0.75);"
+						/><%= article.createdAt.toLocaleDateString('en-GB', { year:
+						'numeric', month: 'short', day: 'numeric' }) %><cite>
+							- <%= articleTimeAgo %> ago</cite
 						></small
 					>
 				</p>
@@ -50,7 +53,9 @@
 				<p class="card-text" style="font-family: Verdana; font-style: italic">
 					<%= article.summary %>
 				</p>
-				<h5 class="mb-0" style="color: #0d47a1; text-decoration: underline">Main Text</h5>
+				<h5 class="mb-0" style="color: #0d47a1; text-decoration: underline">
+					Main Text
+				</h5>
 				<p class="card-text" style="font-family: Verdana">
 					<%- article.sanitizedHtml %>
 				</p>
