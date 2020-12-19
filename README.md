@@ -32,9 +32,9 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/meen-create.png)
-![Example screenshot](./img/meen-about.png)
-![Example screenshot](./img/meen-contact.png)
+![Example screenshot](./img/meen-create.jpg)
+![Example screenshot](./img/meen-about.jpg)
+![Example screenshot](./img/meen-contact.jpg)
 
 ## :signal_strength: Technologies
 
@@ -44,8 +44,8 @@
 * [Mongoose v5](https://mongoosejs.com/) object modelling for Node.js
 * [marked v1](https://www.npmjs.com/package/marked) to convert markdown to html
 * [Slugify v1](https://www.npmjs.com/package/slugify) to replace unwanted characters etc
-* [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
-* [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
+* [Dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
+* [Node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
 * [Unsplash images](https://source.unsplash.com/) - random images used for building article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
 * [Day.js v1](https://day.js.org/en/) used with [relative time](https://day.js.org/docs/en/display/from-now#list-of-breakdown-range) plugin to calculate how long ago article was written.
