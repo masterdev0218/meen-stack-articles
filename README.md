@@ -32,16 +32,18 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/mongodb.png)
+![Example screenshot](./img/meen-create.png)
+![Example screenshot](./img/meen-about.png)
+![Example screenshot](./img/meen-contact.png)
 
 ## :signal_strength: Technologies
 
 * [EJS v3](https://ejs.co/#promo) Embedded Javascript templating to generate HTML markup
-* [Express method-override](http://expressjs.com/en/resources/middleware/method-override.html) to be able to use HTTP verbs PUT or DELETE
+* [Express method-override v3](http://expressjs.com/en/resources/middleware/method-override.html) to be able to use HTTP verbs PUT or DELETE
 * [Express v4](https://expressjs.com/) framework for Node.js
 * [Mongoose v5](https://mongoosejs.com/) object modelling for Node.js
-* [cors](https://www.npmjs.com/package/cors) Cross Origin Resource Sharing Connect/Express middleware
 * [marked v1](https://www.npmjs.com/package/marked) to convert markdown to html
+* [Slugify v1](https://www.npmjs.com/package/slugify) to replace unwanted characters etc
 * [dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
 * [node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
