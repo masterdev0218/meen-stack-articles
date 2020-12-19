@@ -1,35 +1,34 @@
 # :zap: MEEN Stack Articles
 
-* This app displays articles written using markup language in Bootstrap cards. It uses the MongoDB, Express, Ejs & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations.
+* This app displays articles written using markup language in Bootstrap cards.
+* It uses the MongoDB, Express, Ejs & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations.
 
 **Note:** to open web links in a new window use: _ctrl+click on link_
 
 ## :page_facing_up: Table of contents
 
 * [:zap: MEEN Stack Articles](#zap-meen-stack-articles)
-	* [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
-	* [:books: General info](#books-general-info)
-	* [:camera: Screenshots](#camera-screenshots)
-	* [:signal_strength: Technologies](#signal_strength-technologies)
-	* [:floppy_disk: Setup](#floppy_disk-setup)
-	* [:computer: Code Examples](#computer-code-examples)
-	* [:cool: Features](#cool-features)
-	* [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
-	* [:clap: Inspiration](#clap-inspiration)
-	* [:envelope: Contact](#envelope-contact)
+  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:books: General info](#books-general-info)
+  * [:camera: Screenshots](#camera-screenshots)
+  * [:signal_strength: Technologies](#signal_strength-technologies)
+  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:computer: Code Examples](#computer-code-examples)
+  * [:cool: Features](#cool-features)
+  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clap: Inspiration](#clap-inspiration)
+  * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
 * The EJS (Express JS) template engine enables the use of static template files with dynamic content. It is faster and simpler than Angular or React but has less features.
-* Partials were used to be able to reuse the same code, eg header.ejs - which includes the Bootstrap CDN link & navbar.ejs - a common top navigation bar.
+* Partials were used to be able to reuse the same code, eg `header.ejs` - which includes the Bootstrap CDN link & `navbar.ejs` - a common top navigation bar.
 * Index (home) page: Article images with summaries are displayed in a responsive grid so they wrap around nicely as the screen size changes. The number of articles is displayed at the top using the articles array length.
 * Display_all Page: The header shows the creation date, formatted using the Javascript 'toLocaleDateString' method. The footer has buttons to redirect back to the home page and to the article edit page. There is also an article delete button with a user confirmation alert.
-* Article Edit Page: User can change all article fields. Date will update automatically to todays date. Footer has edit cancel and save buttons.
-* New Article page: User can create a new article by filling in validated form fields
+* Article Edit Page: User can change all article fields. Date will update automatically to todays date. Footer has edit cancel and save buttons. 2nd nav menu and credit for image
+* New Article page: User can create a new article by filling in validated form fields.
 * About page: Displays information about the app. Footer has links to the 4 MEEN full-stack technologies used.
 * Contact page: Displays Github API data on app author with links to personal website and contact page.
-
-* Article edit page: 2nd nav menu and credit for image
 
 ## :camera: Screenshots
 
@@ -51,7 +50,10 @@
 
 ## :floppy_disk: Setup
 
-* `npm run dev` to run Ejs client and backend server concurrently. Navigate to `http://localhost:4000/` to see frontend (refresh after changes - does not auto-update).
+* Run `npm i` to install dependencies.
+* Create a root-level `.env` file and add MongoDB connection string: `MONGO_URI="MongoDB connection string"`
+* Run `npm run dev` to create an Ejs client and backend server concurrently.
+* Navigate to `http://localhost:4000/` to see frontend (refresh after changes - does not auto-update).
 
 ## :computer: Code Examples
 
@@ -96,7 +98,7 @@ exports.article_list = async (req, res) => {
 ## :clipboard: Status & To-Do List
 
 * Status: Working. Refactor - add functionality.
-* To-Do: Add modals/toasts to say if title is repeated etc. Add markdown editor?
+* To-Do: Add articles for screen prints. Add modals/toasts to say if title is repeated etc. Add markdown editor?
 
 ## :clap: Inspiration
 

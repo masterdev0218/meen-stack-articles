@@ -1,13 +1,13 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const articleRouter = require('./routes/articles');
-const methodOverride = require('method-override');
+const express = require("express");
+const mongoose = require("mongoose");
+const articleRouter = require("./routes/articles");
+const methodOverride = require("method-override");
 
 const app = express();
-const { PORT, mongoUri } = require('./config/config');
-const path = require('path');
+const { PORT, mongoUri } = require("./config/config");
+const path = require("path");
 
-const article_controller = require('./controllers/article.controllers');
+const article_controller = require("./controllers/article.controllers");
 
 mongoose.Promise = global.Promise;
 mongoose
@@ -19,21 +19,21 @@ mongoose
 	})
 	.then(
 		() => {
-			console.log('MongoDB database is connected');
+			console.log("MongoDB database is connected");
 		},
 		(err) => {
-			console.log('Failed to connect to the database' + err);
+			console.log("Failed to connect to the database" + err);
 		}
 	);
 
-app.set('view engine', 'ejs');
+app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
-app.use(methodOverride('_method'));
+app.use(methodOverride("_method"));
 
-app.get('/', article_controller.article_list);
-app.use('/articles', articleRouter);
-app.use(express.static(path.join(__dirname, 'public')));
+app.get("/", article_controller.article_list);
+app.use("/articles", articleRouter);
+app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(PORT, () => {
-	console.log('Server is running on Port:', PORT);
+	console.log("Server is running on Port:", PORT);
 });

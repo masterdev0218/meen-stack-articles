@@ -1,26 +1,26 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-const article_controller = require('../controllers/article.controllers');
+const article_controller = require("../controllers/article.controllers");
 
-router.get('/new', article_controller.new_article);
-router.get('/about', (req, res) =>
-	res.render('articles/about', { title: 'About' })
+router.get("/new", article_controller.new_article);
+router.get("/about", (req, res) =>
+	res.render("articles/about", { title: "About" })
 );
-router.get('/contact', article_controller.fetch_github_profile);
-router.get('/edit/:id', article_controller.find_to_edit);
-router.get('/:slug', article_controller.find_to_show);
+router.get("/contact", article_controller.fetch_github_profile);
+router.get("/edit/:id", article_controller.find_to_edit);
+router.get("/:slug", article_controller.find_to_show);
 router.post(
-	'/',
+	"/",
 	article_controller.presave_new_article,
-	saveArticleAndRedirect('new')
+	saveArticleAndRedirect("new")
 );
 router.put(
-	'/:id',
+	"/:id",
 	article_controller.presave_edited_article,
-	saveArticleAndRedirect('edit')
+	saveArticleAndRedirect("edit")
 );
-router.delete('/:id', article_controller.delete_article);
+router.delete("/:id", article_controller.delete_article);
 
 function saveArticleAndRedirect(path) {
 	return async (req, res) => {

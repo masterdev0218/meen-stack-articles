@@ -1,72 +1,87 @@
-	<div class="form-group">
-		<label class="mb-1" style="color: #0d47a1" for="title">Title</label
-		><small id="titleHelp" class="text-muted" style="color: #0d47a1 !important">
-			(4 - <%= maxTitleLength %> characters)
-		</small>
-		<input
-			required
-			value="<%= article.title %>"
-			type="text"
-			name="title"
-			id="title"
-			class="form-control"
-			style="max-width: 350px"
-			aria-label="Enter article title"
-		/>
-	</div>
-	<div class="form-group">
-		<label class="mb-1" style="color: #0d47a1" for="imageUrl">Image Url</label
-		><small id="imageUrlHelp" class="text-muted" style="color: #0d47a1 !important;"> (https://example.com) </small>
-		<input
-			required
-			value="<%= article.imageUrl %>"
-			type="text"
-			name="imageUrl"
-			id="imageUrl"
-			class="form-control"
-			aria-label="Enter article image url"
-		/>
-	</div>
-	<div class="form-group">
-		<label class="mb-1" style="color: #0d47a1" for="imageCredit">Image Credit</label
-		><small id="imageCreditHelp" class="text-muted" style="color: #0d47a1 !important"> (who created the image?) </small>
-		<input
-			required
-			value="<%= article.imageCredit %>"
-			type="text"
-			name="imageCredit"
-			id="imageCredit"
-			class="form-control"
-			aria-label="Enter article image credit"
-		/>
-	</div>
-	<div class="form-group">
-		<label class="mb-1" style="color: #0d47a1" for="summary">Summary</label
-		><small id="summaryHelp" class="text-muted" style="color: #0d47a1 !important">
-			(4 - <%= maxSummaryLength %> characters)
-		</small>
-		<textarea
-			required
-			name="summary"
-			id="summary"
-			class="form-control"
-			rows="4"
-			aria-label="Enter article summary"
-		><%= article.summary %></textarea
-		>
-	</div>
-	<div class="form-group">
-		<label class="mb-1" style="color: #0d47a1" for="markdown">Article Body</label
-		><small id="titleHelp" class="text-muted" style="color: #0d47a1 !important">
-			(4 - <%= maxMarkdownLength %> characters using Markup)
-		</small>
-		<textarea
-			required
-			name="markdown"
-			id="markdown"
-			class="form-control"
-			rows="4"
-			aria-label="Enter article main body"
-		><%= article.markdown %></textarea
-		>
-	</div>
+<div class="form-group">
+	<label class="mb-1" style="color: #0d47a1" for="title">Title</label
+	><small id="titleHelp" class="text-muted" style="color: #0d47a1 !important">
+		(4 - <%= maxTitleLength %> characters)
+	</small>
+	<input
+		required
+		value="<%= article.title %>"
+		type="text"
+		name="title"
+		id="title"
+		class="form-control"
+		style="max-width: 350px"
+		aria-label="Enter article title"
+	/>
+</div>
+<div class="form-group">
+	<label class="mb-1" style="color: #0d47a1" for="imageUrl">Image Url</label
+	><small
+		id="imageUrlHelp"
+		class="text-muted"
+		style="color: #0d47a1 !important"
+	>
+		(https://example.com)
+	</small>
+	<input
+		required
+		value="<%= article.imageUrl %>"
+		type="text"
+		name="imageUrl"
+		id="imageUrl"
+		class="form-control"
+		aria-label="Enter article image url"
+	/>
+</div>
+<div class="form-group">
+	<label class="mb-1" style="color: #0d47a1" for="imageCredit"
+		>Image Credit</label
+	><small
+		id="imageCreditHelp"
+		class="text-muted"
+		style="color: #0d47a1 !important"
+	>
+		(who created the image?)
+	</small>
+	<input
+		required
+		value="<%= article.imageCredit %>"
+		type="text"
+		name="imageCredit"
+		id="imageCredit"
+		class="form-control"
+		aria-label="Enter article image credit"
+	/>
+</div>
+<div class="form-group">
+	<label class="mb-1" style="color: #0d47a1" for="summary">Summary</label
+	><small id="summaryHelp" class="text-muted" style="color: #0d47a1 !important">
+		(4 - <%= maxSummaryLength %> characters)
+	</small>
+	<textarea
+		required
+		name="summary"
+		id="summary"
+		class="form-control"
+		rows="4"
+		aria-label="Enter article summary"
+	>
+<%= article.summary %></textarea
+	>
+</div>
+<div class="form-group">
+	<label class="mb-1" style="color: #0d47a1" for="markdown">Article Body</label
+	><small id="titleHelp" class="text-muted" style="color: #0d47a1 !important">
+		(4 - <%= maxMarkdownLength %> characters using Markup)
+	</small>
+	<textarea
+		required
+		name="markdown"
+		id="markdown"
+		class="form-control"
+		rows="4"
+		aria-label="Enter article main body"
+	>
+<%= article.markdown %></textarea
+	>
+</div>

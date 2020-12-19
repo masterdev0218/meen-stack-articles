@@ -1,5 +1,4 @@
-<%- include ("partials/header", {title: "Edit"}) %>
-<body>
+<%- include ('partials/header', {title: "Edit"}) %>
 	<%- include('partials/navbar', {page_name: "edit"}) %>
 	<div class="container py-3">
 		<div class="card rounded" style="max-width: 1000px">
@@ -10,7 +9,7 @@
 			</div>
 			<div class="card-body p-3">
 				<form action="/articles/<%= article.id %>?_method=PUT" method="POST" id="editForm">
-					<%- include ("partials/fields", { maxTitleLength, maxMarkdownLength,
+					<%- include ('partials/fields', { maxTitleLength, maxMarkdownLength,
 					maxSummaryLength }) %>
 					<div class="card-footer d-flex justify-content-around">
 						<div>
@@ -30,6 +29,4 @@
 				</form>
 			</div>
 	</div>
-</body>
-
-<%- include ("partials/footer") %>
+<%- include ('partials/footer') %>
