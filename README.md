@@ -2,8 +2,12 @@
 
 * This app displays articles written using markup language in Bootstrap cards.
 * It uses the MongoDB, Express, Ejs & Node.js (MEEN) stack to perform Create, Read, Update and Delete (CRUD) operations.
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-**Note:** to open web links in a new window use: _ctrl+click on link_
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/meen-stack-articles?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/meen-stack-articles?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/meen-stack-articles?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/meen-stack-articles?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -17,6 +21,7 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -108,6 +113,10 @@ exports.article_list = async (req, res) => {
 * [Building a Simple CRUD app with Node, Express, and MongoDB](https://zellwk.com/blog/crud-express-mongodb/)
 * [MDN Web DOcs: Express Tutorial Part 4: Routes and controllers](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
