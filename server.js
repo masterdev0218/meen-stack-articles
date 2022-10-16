@@ -11,12 +11,7 @@ const article_controller = require("./controllers/article.controllers");
 
 mongoose.Promise = global.Promise;
 mongoose
-	.connect(mongoUri, {
-		useNewUrlParser: true,
-		useCreateIndex: true,
-		useUnifiedTopology: true,
-		useFindAndModify: false,
-	})
+	.connect(mongoUri)
 	.then(
 		() => {
 			console.log("MongoDB database is connected");
