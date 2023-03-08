@@ -12,16 +12,16 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: MEEN Stack Articles](#zap-meen-stack-articles)
-	* [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+	* [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
 	* [:books: General info](#books-general-info)
 	* [:camera: Screenshots](#camera-screenshots)
-	* [:signal_strength: Technologies](#signal_strength-technologies)
-	* [:floppy_disk: Setup](#floppy_disk-setup)
+	* [:signal\_strength: Technologies](#signal_strength-technologies)
+	* [:floppy\_disk: Setup](#floppy_disk-setup)
 	* [:computer: Code Examples](#computer-code-examples)
 	* [:cool: Features](#cool-features)
-	* [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+	* [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
 	* [:clap: Inspiration](#clap-inspiration)
-	* [:file_folder: License](#file_folder-license)
+	* [:file\_folder: License](#file_folder-license)
 	* [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -50,8 +50,8 @@
 * [Mongoose v6](https://mongoosejs.com/) object modelling for Node.js
 * [marked v4](https://www.npmjs.com/package/marked) to convert markdown to html
 * [Slugify v1](https://www.npmjs.com/package/slugify) to replace unwanted characters etc
-* [Dompurify v2](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
-* [Node-fetch v3](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
+* [Dompurify v3](https://www.npmjs.com/package/dompurify) used as an XSS sanitizer for the output HTML from the markdown text
+* [Node-fetch v2](https://www.npmjs.com/package/node-fetch) light-weight npm module that adds a window.fetch compatible API to Node.js, used here to fetch my data from the Github API
 * [Material Icons](https://material.io/resources/icons/?style=baseline) svg data used to create a `public/images` folder of icons I can reuse
 * [Unsplash images](https://source.unsplash.com/) - random images used for building article card array. `https://source.unsplash.com/random/400x300` supplies a random image to the specified size 400x300
 * [Day.js v1](https://day.js.org/en/) used with [relative time](https://day.js.org/docs/en/display/from-now#list-of-breakdown-range) plugin to calculate how long ago article was written.
